@@ -1,9 +1,9 @@
 import { useState } from "react";
-import styles from './Tela.module.css'
+import styles from "./Tela.module.css";
 import { Forms } from "./Forms";
 import { Cabecalho } from "./Cabecalho";
 import { getCep } from "./getCep";
-import { Resposta } from "./Resposta";
+import { BoxResponse } from "./BoxResponse";
 
 export function Tela() {
   const [display, setDisplay] = useState("none");
@@ -33,7 +33,7 @@ export function Tela() {
     <div className={styles.container}>
       <Cabecalho />
       <Forms onChange={handleCep} onClick={pesquisar} />
-      <Resposta
+      <BoxResponse
         display={display}
         logradouro={logradouro}
         bairro={bairro}
